@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Minecraft";
+    src: url(./font/Minecraft.otf);
+}
+
+body {
+    font-family: "Minecraft"!important;
+}
+
+.bg-stone {
+    background-image: url(./img/stone.png);
+    background-repeat: repeat ;
+}
