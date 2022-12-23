@@ -10,6 +10,9 @@
 
 - Installer SurrealDB selon les directives de la documentatioon : https://surrealdb.com/docs/start/installation
 
+### Variables d'environnements
+
+- Créer le fichier .env à la racine du site web à partir du fichier .env.example et remplir les champs avec les valeurs appriopriées.
 
 ## Se connecter à la base de données
 
