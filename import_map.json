@@ -18,8 +18,6 @@
     "minecraft-api": "https://deno.land/x/minecraft@2.0.1/mod.ts",
     "base-64": "https://deno.land/std@0.166.0/encoding/base64.ts",
     "i18next": "https://deno.land/x/i18next@v22.4.6/index.js",
-    "i18next-fs-backend": "https://deno.land/x/i18next_fs_backend@v2.1.1/index.js",
-    "i18next-http-backend":"https://deno.land/x/i18next_http_backend/index.js",
     "jose": "https://deno.land/x/jose@v4.11.1/index.ts"
 
   }
