@@ -37,8 +37,8 @@ export default function PlayerByName({data}: PageProps<Player[] | null>) {
                         <div class="flex flex-wrap">
                             <div class="">
                                 {
-                                    player.textures.SKIN !== undefined && player.textures.SKIN !== null &&
-                                    <PlayerHead url={player.textures.SKIN.url} />
+                                    /*player.textures.SKIN !== undefined && player.textures.SKIN !== null &&
+                                    <PlayerHead url={player.textures.SKIN.url} />*/
                                 }
                                 <p class="text-gray-700 text-base mb-4">
                                     Dernière mise à jour: {new Date(player.updated).toLocaleDateString()}.

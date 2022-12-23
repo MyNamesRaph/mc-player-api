@@ -14,8 +14,8 @@ export default function PlayerList({players} : Props) {
                         <a href={"players/"+player.name} class="flex justify-center">
                             <div class="block p-6 rounded-lg shadow-lg bg-gray-200 max-w-sm">
                                 {
-                                    player.textures.SKIN !== undefined && player.textures.SKIN !== null &&
-                                    <PlayerHead url={player.textures.SKIN.url}></PlayerHead>
+                                    /*player.textures.SKIN !== undefined && player.textures.SKIN !== null &&
+                                    <PlayerHead url={player.textures.SKIN.url}></PlayerHead>*/
                                 }
                             
                                 <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">{player.name}</h5>
