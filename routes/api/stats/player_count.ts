@@ -6,8 +6,10 @@ export const handler: Handlers = {
   async GET(_req) {
     try {
       const players = await Surreal.Instance.select('player');
-        
-      const body = JSON.stringify(players);
+
+      const playerCount = players.length;
+
+      const body = JSON.stringify({"player-count": playerCount});
       return new Response(body);
     }
     catch (e) {

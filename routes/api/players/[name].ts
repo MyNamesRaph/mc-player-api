@@ -18,16 +18,16 @@ export const handler: Handlers = {
                 return new Response(body);
             }
             else {
-                return new Response(`PLAYER "${name}" NOT FOUND`, { status: 404 });
+                return new Response(`Joueur "${name}" NON TROUVÉ`, { status: 404 });
             }
         }
         else {
-            return new Response('ERROR', { status: 500 });
+            return new Response('ERREUR', { status: 500 });
         }
     }
     catch (e) {
       console.log('ERROR :',e);
-      return new Response('ERROR', { status: 500 });
+      return new Response('ERREUR', { status: 500 });
     }
   }
 };

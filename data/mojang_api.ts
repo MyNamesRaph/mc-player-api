@@ -24,7 +24,7 @@ export function getProfile(uuid: string) : Promise<any> {
                 });
             }
             else if (resp.status == 404){
-                reject({error: 404, errorMessage: "Mojang API may be unavailable"});
+                reject({error: 404, errorMessage: "L'api Mojang est possiblement hors-service."});
             }
             else {
                 resp.text().then( (text) => {

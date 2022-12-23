@@ -1,61 +1,40 @@
-import { ComponentChildren } from "preact";
 import Icon3dCubeSphere from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/3d-cube-sphere.tsx"
 import BrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-github.tsx";
 type Props = {
-  children: ComponentChildren;
+  menu: { name: string; href: string; }[];
 };
 
-export default function Footer() {
-  const menus = [
-    {
-      children: [
-        { name: "Getting Started", href: "#" },
-        { name: "Guide", href: "#" },
-        { name: "API", href: "#" },
-        { name: "Showcase", href: "#" },
-        { name: "Pricing", href: "#" },
-      ],
-    },
-  ];
+export default function Footer({menu}: Props) {
 
   return (
-    <div class="bg-stone flex flex-col md:flex-row w-full w-screen gap-8 md:gap-16 px-8 py-8 text-sm">
+    <div class="hidden flex bg-stone sm:flex flex-col md:flex-row w-full w-screen gap-8 md:gap-16 px-8 py-8 text-sm">
       <div class="flex-1">
         <div class="flex items-center gap-1">
           <Icon3dCubeSphere class="inline-block mx-2" />
           <div class="font-bold text-2xl">
-            Raph's MC Server API
+            MC Server API
           </div>
         </div>
       </div>
 
-      {menus.map((item) => (
-        <div class="mb-4">
-          <div class="font-bold"></div>
-          <ul class="mt-2">
-            {item.children.map((child) => (
-              <li class="mt-2" key={child.name}>
-                <a
-                  class="text-green-750 hover:text-black"
-                  href={child.href}
-                >
-                  {child.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
 
-      <div class="text-green-500 space-y-2">
-        <div class="text-xs">
-          Copyright © 2020 DenoLand<br />
-          All right reserved.
-        </div>
+      <ul class="flex flex-row">
+        {menu.map((child) => (
+          <li class="mx-2" key={child.name}>
+            <a
+              class="text-green-800 hover:text-black"
+              href={child.href}
+            >
+              {child.name}
+            </a>
+          </li>
+        ))}
+      </ul>
 
+      <div class="text-green-800">
         <a
-          href="https://github.com/denoland/fresh"
-          class="inline-block hover:text-black"
+          href="https://github.com/MyNamesRaph/mc-player-api/"
+          class="hover:text-black"
         >
           <BrandGithub />
         </a>
