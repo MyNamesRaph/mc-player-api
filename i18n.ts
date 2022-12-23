@@ -22,7 +22,7 @@ export async function initTranslations() {
         } 
     });*/
 
-    await i18next.use(Backend).init({
+    await i18next.init({
         //debug: true,
         initImmediate: false,
         fallbackLng: "en",
