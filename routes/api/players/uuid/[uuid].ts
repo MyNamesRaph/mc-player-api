@@ -9,21 +9,8 @@ export const handler: Handlers = {
         const { uuid } = ctx.params;
         const player = await Surreal.Instance.select("player:⟨"+uuid+"⟩");
 
-        console.log(player);
-        return new Response();
-    
-        /*if (Array.isArray(player)) {
-            if (player.length >= 1) {
-                const body = JSON.stringify(player);
-                return new Response(body);
-            }
-            else {
-                return new Response(`Joueur "${uuid}" non trouvé`, { status: 404 });
-            }
-        }
-        else {
-            return new Response('ERREUR', { status: 500 });
-        }*/
+        const body = JSON.stringify(player);
+        return new Response(body);
     }
     catch (e) {
         if (e == RecordError) {
