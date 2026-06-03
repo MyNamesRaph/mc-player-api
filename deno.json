@@ -1,10 +1,12 @@
 {
   "tasks": {
-    "start": "deno run -A --watch=static/,routes/ dev.ts"
-  },
+     "start": "deno run -A --watch=static/,routes/ dev.ts"
+    },
   "importMap": "./import_map.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+  "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
+  "imports": {
+    "fresh": "jsr:@fresh/core@^2.3.3",
+    "preact": "npm:preact@^10.29.1",
+    "@preact/signals": "npm:@preact/signals@^2.9.0"
   }
 }

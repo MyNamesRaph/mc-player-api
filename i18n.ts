@@ -1,28 +1,24 @@
 import i18next from "i18next";
 
 export async function initTranslations() {
-    /*await i18next.use(Backend).init({
-        debug: true,
-        fallbackLng: "en",
-        ns: "translation",
-        defaultNS: "translation",
-        ressources: {
-            en: {
-                translation: {
-                    "home": "Acceuil",
-                    "players": "Joueurs",
-                    "stats": "Stats",
-                    "apiKey": "Obtenir une clef d'api"
-                }
-                
-            },
-            fr: {
-                translation: frTranslation,
-            },
-        } 
-    });*/
+  await i18next.init({
+    debug: true,
+    fallbackLng: "en",
+    ns: "translation",
+    defaultNS: "translation",
+    ressources: {
+      en: {
+        translation: {
+          "home": "Acceuil",
+          players: "Joueurs",
+          "stats": "Stats",
+          "apiKey": "Obtenir une clef d'api",
+        },
+      },
+    },
+  });
 
-    await i18next.init({
+  /*await i18next.init({
         //debug: true,
         initImmediate: false,
         fallbackLng: "en",
@@ -30,8 +26,9 @@ export async function initTranslations() {
         backend: {
             loadPath: "static/locales/{{lng}}/{{ns}}.json",
         },
-    });
+    });*/
 }
 
-export default i18next;
-//export default (lng: string | undefined | null) => i18next.getFixedT(lng || systemLocale);
+//export default i18next;
+export default (lng: string | undefined | null) =>
+  i18next.getFixedT(lng || systemLocale);

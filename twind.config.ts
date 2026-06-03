@@ -13,6 +13,6 @@ export default {
       yellow: colors.yellow,
       red: colors.red,
       transparent: "transparent",
-    }
+    },
   },
 } as Options;

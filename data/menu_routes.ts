@@ -1,20 +1,20 @@
-//import i18n from "../locales/i18n.ts";
+import i18next from "../i18n.ts";
 
 function getTranslatedRoutes(language: string) {
-    /*const t = i18n(language);
-    return [
-        { name: t("home"), href: "/" },
-        { name: t("players"), href: "/players" },
-        { name: t("stats"), href: "/stats" },
-        { name: t("connect"), href: "/auth"}
-    ]*/
+  const t = i18next(language);
+  return [
+    { name: t("home"), href: "/" },
+    { name: t("players"), href: "/players" },
+    { name: t("stats"), href: "/stats" },
+    { name: t("connect"), href: "/auth" },
+  ];
 
-    return [
+  /*return [
         { name: "Acceuil", href: "/" },
         { name: "Joueurs", href: "/players" },
         { name: "Stats", href: "/stats" },
         { name: "Connexion", href: "/auth"}
-    ]
+    ]*/
 }
 
 export default getTranslatedRoutes;

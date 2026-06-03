@@ -1,11 +1,10 @@
-import Icon3dCubeSphere from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/3d-cube-sphere.tsx"
+import Icon3dCubeSphere from "https://deno.land/x/tabler_icons_tsx@0.0.2/tsx/3d-cube-sphere.tsx";
 import BrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.1/tsx/brand-github.tsx";
 type Props = {
-  menu: { name: string; href: string; }[];
+  menu: { name: string; href: string }[];
 };
 
-export default function Footer({menu}: Props) {
-
+export default function Footer({ menu }: Props) {
   return (
     <div class="hidden flex bg-stone sm:flex flex-col md:flex-row w-full w-screen gap-8 md:gap-16 px-8 py-8 text-sm">
       <div class="flex-1">
@@ -16,7 +15,6 @@ export default function Footer({menu}: Props) {
           </div>
         </div>
       </div>
-
 
       <ul class="flex flex-row">
         {menu.map((child) => (
